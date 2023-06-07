@@ -1,4 +1,4 @@
-//import SwiftUI
+import SwiftUI
 
 public struct PackageTest1 {
     public private(set) var text = "Hello, World!"
@@ -23,12 +23,11 @@ public struct PackageTest1 {
         }
     }
     
-//    public struct Button: View {
-//        var name: String = "Default Text"
-//        var body: some View {
-//            Button {
-//                Text(name)
-//            }
-//        }
-//    }
+    @available(iOS 14, macOS 11.0, *)
+    public struct MyButton: View {
+        var name: String = "Default Text"
+        public var body: some View {
+            Button{} label: { Text("This is a library button") }
+        }
+    }
 }
