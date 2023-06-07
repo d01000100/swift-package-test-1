@@ -10,6 +10,11 @@ import SwiftUI
 @available(iOS 14, macOS 11.0, *)
 public struct MyButton: View {
     var name: String = "Default Text"
+    
+    public init(name: String) {
+        self.name = name
+    }
+    
     public var body: some View {
         Button{} label: {
             VStack {
@@ -23,6 +28,6 @@ public struct MyButton: View {
 @available(iOS 14, macOS 11.0, *)
 struct MyButton_Previews: PreviewProvider {
     static var previews: some View {
-        MyButton()
+        MyButton(name: "Hello")
     }
 }
