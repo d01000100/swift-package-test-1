@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "PackageTest1",
-            targets: ["PackageTest1"]),
+            targets: ["PackageTest1", "MyButton"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,7 +22,8 @@ let package = Package(
             name: "PackageTest1",
             dependencies: []),
         .target(
-            name: "MyButton"),
+            name: "MyButton",
+            dependencies: []),
         .testTarget(
             name: "PackageTest1Tests",
             dependencies: ["PackageTest1"]),
