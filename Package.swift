@@ -21,6 +21,8 @@ let package = Package(
         .target(
             name: "PackageTest1",
             dependencies: []),
+        .target(
+            name: "MyButton"),
         .testTarget(
             name: "PackageTest1Tests",
             dependencies: ["PackageTest1"]),
